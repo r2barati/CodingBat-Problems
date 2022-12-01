@@ -1,0 +1,53 @@
+# ----------------------------------- 1
+# xyz_there
+def xyz_there(str):
+    for i in range(len(str)):
+        cur1 = str[i:i+4]
+        cur2 = str[i+1:i+4]
+        cur3 = str[i:i+3]
+        #print(cur1, cur2, cur3)
+        if (i == 0 and cur3 == "xyz") or (cur1 != ".xyz" and cur2 == "xyz"): return True    
+    return False
+# - --------------------------------- 2
+# end_other
+def end_other(a, b):
+  shorter = min(len(a), len(b))
+  if len(a) < len(b):
+    return a.lower() == b.lower()[len(b)-shorter:len(b)]
+  elif len(a) > len(b):
+    return b.lower() == a.lower()[len(a)-shorter:len(a)]
+  else:
+    return a.lower() == b.lower()
+# ------------------------------------ 3
+# Count_Code
+def count_code(str):
+  sum = 0
+  for i in range(len(str)):
+    if str[i:i+2] == 'co' and str[i+3:i+4] == 'e':
+      sum = sum + 1
+  return sum
+# ------------------------------------ 4
+# Cat_Dog 
+def cat_dog(str):
+  count_cat = 0
+  count_dog = 0
+  for i in range(len(str)):
+    cur = str[i:i+3]
+    if cur == "cat": count_cat += 1
+    if cur == "dog": count_dog += 1
+  return(count_cat == count_dog)
+# ------------------------------------ 5
+# Count_hi
+def count_hi(str):
+  count = 0
+  for i in range(len(str)):
+    if str[i:i+2] == "hi":
+      count = count + 1
+  return count
+# ----------------------------------- 6
+Double_Char
+def double_char(str):
+  result = ""
+  for i in range(len(str)):
+    result += str[i] + str[i]
+  return result

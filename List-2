@@ -1,0 +1,63 @@
+# -------------------------------------- 1
+# Has22
+def has22(nums):
+    count = 0
+    for num in nums:
+        if num == 2:
+            count += 1
+        else: count = 0
+        if count == 2: return True
+    return False
+# --------------------------------------- 2
+# Sum67
+def sum67(nums):
+    skip = False
+    sum = 0
+    for num in nums:
+        if not skip:
+            if num == 6:
+                skip = True
+            else: sum += num
+        else:
+            if num == 7:
+                skip = False
+    return(sum)
+#--------------------------------------- 3
+# Sum13
+def sum13(nums):
+    my_sum = 0
+    last = None
+    for num in nums:
+        if num == 13:
+            last = 13
+            continue
+        if last == 13:
+            last = None
+            continue
+        my_sum += num
+    return my_sum
+# ------------------------------------- 4
+# Centered_Average
+def centered_average(nums):
+    min = nums[0]
+    max = nums[0]
+    for num in nums:
+        if num > max: max = num
+        if num < min: min = num
+    return((sum(nums) - (max + min)) // (len(nums)-2))
+# ------------------------------------- 5
+# Big_Diff
+def big_diff(nums):
+  big = -float('inf')
+  small = float('inf')
+  for num in nums:
+    if num > big: big = num
+    if num < small: small = num
+  return big-small
+# ------------------------------------- 6
+# Count_Evens
+def count_evens(nums):
+  count = 0
+  for i in nums:
+    if i%2 == 0: count += 1
+  return count

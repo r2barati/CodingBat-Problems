@@ -1,0 +1,72 @@
+# --------------------------------- 1
+# Left2
+
+def left2(str):
+  return str[2:]+str[:2]
+
+# --------------------------------- 2
+# Non_start
+
+def non_start(a, b):
+  return a[1:]+b[1:]
+  
+# --------------------------------- 3
+# Combo_string
+
+def combo_string(a, b):
+  if len(a) < len(b):
+    return a + b + a
+  else:
+    return b + a + b
+    
+# --------------------------------- 4
+# without_end 
+
+def without_end(str):
+  return str[1:len(str)-1]
+
+# --------------------------------- 5 
+# first_half
+
+def first_half(str):
+  return str[0:len(str)/2]
+
+# --------------------------------- 6
+# first_two
+
+def first_two(str):
+  if len(str) >=2:
+    return str[0]+str[1]
+  else:
+    return str
+    
+# --------------------------------- 7 
+# extra_end
+
+def extra_end(str):
+  return (str[len(str)-2] + str[len(str)-1])*3
+
+# --------------------------------- 8
+# make_out_word
+
+def make_out_word(out, word):
+  return out[0]+out[1]+ word + out[2]+out[3]
+
+# --------------------------------- 9
+# make_tags
+
+def make_tags(tag, word):
+  return "<"+tag+">"+word+"</"+tag+">"
+
+# --------------------------------- 10
+# make_abba
+
+def make_abba(a, b):
+  return a + b + b + a
+
+# --------------------------------- 11
+# hello_name
+
+def hello_name(name):
+    return "Hello " + name + "!"
+ 
